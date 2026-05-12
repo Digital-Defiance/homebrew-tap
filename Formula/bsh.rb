@@ -1,9 +1,9 @@
 class Bsh < Formula
   desc "BrightShell — zsh fork with native BrightDate builtins (bdate, btime, bcal, buptime, bwatch)"
   homepage "https://github.com/Digital-Defiance/bsh"
-  url "https://github.com/Digital-Defiance/bsh/archive/refs/tags/bsh-5.9.0.11.tar.gz"
-  sha256 "d910e7f796c27de0fe06724c5e7e116f1acbb931780becd68cb05612806d403f"
-  version "5.9.0.11"
+  url "https://github.com/Digital-Defiance/bsh/archive/refs/tags/bsh-5.9.0.12.tar.gz"
+  sha256 "880a21d921065d795fabe38afb591823ae1985ddc8d5f5c4ee6e95e2b053c237"
+  version "5.9.0.12"
   license "MIT"
   head "https://github.com/Digital-Defiance/bsh.git", branch: "main"
 
@@ -36,7 +36,7 @@ class Bsh < Formula
   end
 
   test do
-    assert_match "5.9.0.11", shell_output("#{bin}/bsh --version")
+    assert_match "5.9.0.12", shell_output("#{bin}/bsh --version")
     assert_match "bsh", shell_output("#{bin}/bsh --version")
     assert_equal "hello\n", shell_output("#{bin}/bsh -c 'echo hello'")
   end
