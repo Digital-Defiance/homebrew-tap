@@ -3,9 +3,9 @@ class FindutilsBrightdate < Formula
   homepage "https://github.com/Digital-Defiance/findutils-brightdate"
   license "GPL-3.0-or-later"
 
-  url "https://github.com/Digital-Defiance/findutils-brightdate/archive/refs/tags/v4.10.0-bd2.tar.gz"
-  sha256 "65837986d68c6e27a3c0a1708f0a7757a85c7a82ad593142bdb6c84582ab424b"
-  version "4.10.0-bd2"
+  url "https://github.com/Digital-Defiance/findutils-brightdate/archive/refs/tags/v4.10.0-bd3.tar.gz"
+  sha256 "d81ba968f435a5e7de3eea8ea5537fa8ec77086e339fede47a5859f09260a074"
+  version "4.10.0-bd3"
 
   head "https://github.com/Digital-Defiance/findutils-brightdate.git", branch: "main"
 
