@@ -1,15 +1,16 @@
 class Bsh < Formula
-  desc "BrightShell — zsh fork with native BrightDate builtins (bdate, btime, bcal, buptime, bwatch)"
+  desc "BrightShell — zsh fork with native BrightDate builtins and Secure Data Injection (bsh/sdi)"
   homepage "https://github.com/Digital-Defiance/bsh"
-  url "https://github.com/Digital-Defiance/bsh/archive/refs/tags/bsh-5.9.0.17.tar.gz"
-  sha256 "c8c490aaebba3b9ddef155180299566cd25faf1f9ab0b749ce8a76a2825c8853"
-  version "5.9.0.17"
+  url "https://github.com/Digital-Defiance/bsh/archive/refs/tags/bsh-5.10.0.tar.gz"
+  sha256 "e9ea35563e8178541017befb4859d56d5a10a2d15fba44d0e2d0a38fad22882a"
+  version "5.10.0"
   license "MIT"
   head "https://github.com/Digital-Defiance/bsh.git", branch: "main"
 
   depends_on "autoconf" => :build
   depends_on "rust" => :build
   depends_on "ncurses"
+  depends_on "openssl@3"
 
   resource "brightdate-rust" do
     url "https://github.com/Digital-Defiance/brightdate-rust/archive/refs/tags/v0.1.4.tar.gz"
@@ -24,20 +25,23 @@ class Bsh < Formula
     rm_rf buildpath/"brightdate-rust"
     # brightdate-rust must sit at $(sdir_top)/brightdate-rust relative to the bsh root
     resource("brightdate-rust").stage(buildpath/"brightdate-rust")
+    openssl = Formula["openssl@3"].opt_prefix
     system "./configure", "--prefix=#{prefix}",
                           "--bindir=#{bin}",
                           "--mandir=#{man}",
                           "--infodir=#{info}",
                           "--enable-multibyte",
                           "--enable-function-subdirs",
-                          "--with-tcsetpgrp"
+                          "CPPFLAGS=-I#{openssl}/include",
+                          "LDFLAGS=-L#{openssl}/lib"
     system "make"
     system "make", "install.bin", "install.modules", "install.fns"
   end
 
   test do
-    assert_match "5.9.0.17", shell_output("#{bin}/bsh --version")
-    assert_match "bsh", shell_output("#{bin}/bsh --version")
+    assert_match "5.10.0", shell_output("#{bin}/bsh --version")
     assert_equal "hello\n", shell_output("#{bin}/bsh -c 'echo hello'")
+    # Verify the SDI module built and the builtin is registered
+    assert_match "bsh-inject", shell_output("#{bin}/bsh -c 'zmodload bsh/sdi; echo bsh-inject'")
   end
 end
