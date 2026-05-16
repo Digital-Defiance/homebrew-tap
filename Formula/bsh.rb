@@ -1,9 +1,9 @@
 class Bsh < Formula
   desc "BrightShell — zsh fork with native BrightDate builtins and Secure Data Injection (bsh/sdi)"
   homepage "https://github.com/Digital-Defiance/bsh"
-  url "https://github.com/Digital-Defiance/bsh/archive/refs/tags/bsh-5.11.0.tar.gz"
-  sha256 "ad15f41765fc0d7950db3ede18eb4946ffe10c04e02aff8522f03f00a2429eea"
-  version "5.11.0"
+  url "https://github.com/Digital-Defiance/bsh/archive/refs/tags/bsh-5.11.1.tar.gz"
+  sha256 "076e09e0f8b175e94b65f2f6f051a52737413954a8d47d2825a33e7d53e2f65c"
+  version "5.11.1"
   license "MIT"
   head "https://github.com/Digital-Defiance/bsh.git", branch: "main"
 
@@ -43,5 +43,11 @@ class Bsh < Formula
     assert_equal "hello\n", shell_output("#{bin}/bsh -c 'echo hello'")
     # Verify the SDI module built and the builtin is registered
     assert_match "bsh-inject", shell_output("#{bin}/bsh -c 'zmodload bsh/sdi; echo bsh-inject'")
+    # Verify ls -l shows symlink targets (BrightDate format + arrow)
+    (testpath/"target.txt").write("hi")
+    (testpath/"link.txt").make_symlink("target.txt")
+    ls_out = shell_output("#{bin}/bsh -c 'zmodload bsh/files; ls -l #{testpath}/link.txt'")
+    assert_match "->", ls_out
+    assert_match "target.txt", ls_out
   end
 end
