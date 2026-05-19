@@ -1,0 +1,516 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-PNSVF5G3RP"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-PNSVF5G3RP");
+    </script>
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Digital Defiance Homebrew Tap — Casks and Formulae for BSH (BrightShell), the BrightDate time utilities, and the SDI Agent."
+    />
+    <title>Digital Defiance Homebrew Tap</title>
+
+    <style>
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      :root {
+        --bg: #0f1320;
+        --bg2: #0a0d18;
+        --surface: #182033;
+        --surface-2: #1d2640;
+        --accent: #61afef;
+        --accent2: #c678dd;
+        --green: #98c379;
+        --yellow: #e5c07b;
+        --orange: #d19a66;
+        --text: #abb2bf;
+        --text-bright: #e6e6e6;
+        --text-dim: #7a8499;
+        --border: #25304a;
+        --radius: 10px;
+        --mono:
+          "JetBrains Mono", "Fira Code", "Cascadia Code", Consolas, monospace;
+        --sans:
+          -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", Roboto,
+          Oxygen, sans-serif;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        background: var(--bg);
+        color: var(--text);
+        font-family: var(--sans);
+        font-size: 16px;
+        line-height: 1.6;
+        min-height: 100vh;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+
+      a {
+        color: var(--accent);
+        text-decoration: none;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+
+      code {
+        font-family: var(--mono);
+        font-size: 0.9em;
+        background: var(--bg2);
+        color: var(--green);
+        padding: 0.12rem 0.42rem;
+        border-radius: 5px;
+        border: 1px solid var(--border);
+      }
+
+      .container {
+        width: 100%;
+        max-width: 960px;
+        margin: 0 auto;
+        padding: 0 1.5rem;
+      }
+
+      /* ── NAV ── */
+      nav {
+        position: sticky;
+        top: 0;
+        z-index: 100;
+        background: rgba(15, 19, 32, 0.92);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        border-bottom: 1px solid var(--border);
+        height: 56px;
+      }
+
+      .nav-inner {
+        max-width: 960px;
+        margin: 0 auto;
+        height: 100%;
+        padding: 0 1.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      .nav-brand {
+        font-family: var(--mono);
+        font-size: 1.05rem;
+        color: var(--accent);
+        font-weight: 700;
+      }
+
+      .nav-links {
+        display: flex;
+        gap: 1.25rem;
+        font-size: 0.9rem;
+      }
+      .nav-links a {
+        color: var(--text);
+      }
+      .nav-links a:hover {
+        color: var(--text-bright);
+        text-decoration: none;
+      }
+
+      /* ── HERO ── */
+      header.hero {
+        text-align: center;
+        padding: 5rem 1.5rem 3.5rem;
+        border-bottom: 1px solid var(--border);
+        background: radial-gradient(
+            ellipse at top,
+            rgba(97, 175, 239, 0.08),
+            transparent 60%
+          ),
+          var(--bg);
+      }
+
+      header.hero h1 {
+        font-size: clamp(2rem, 5vw, 3rem);
+        color: var(--text-bright);
+        font-weight: 700;
+        letter-spacing: -0.01em;
+        margin-bottom: 0.75rem;
+      }
+
+      header.hero h1 .accent {
+        color: var(--accent);
+      }
+
+      header.hero .tagline {
+        max-width: 640px;
+        margin: 0 auto 1.5rem;
+        font-size: 1.075rem;
+        color: var(--text);
+      }
+
+      header.hero .tagline strong {
+        color: var(--accent2);
+        font-weight: 600;
+      }
+
+      .hero-install {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.6rem;
+        background: var(--bg2);
+        border: 1px solid var(--border);
+        border-radius: var(--radius);
+        padding: 0.7rem 1rem;
+        font-family: var(--mono);
+        font-size: 0.92rem;
+        color: var(--green);
+      }
+      .hero-install::before {
+        content: "$";
+        color: var(--text-dim);
+      }
+
+      /* ── SECTIONS ── */
+      section {
+        padding: 3.5rem 0;
+        border-bottom: 1px solid var(--border);
+      }
+      section:last-of-type {
+        border-bottom: none;
+      }
+
+      .section-label {
+        font-family: var(--mono);
+        font-size: 0.78rem;
+        text-transform: uppercase;
+        letter-spacing: 0.12em;
+        color: var(--accent2);
+        margin-bottom: 0.6rem;
+      }
+
+      h2 {
+        font-size: 1.6rem;
+        color: var(--text-bright);
+        font-weight: 600;
+        margin-bottom: 1.5rem;
+        letter-spacing: -0.005em;
+      }
+
+      /* ── PACKAGE CARDS ── */
+      .pkg-grid {
+        display: grid;
+        gap: 1rem;
+      }
+
+      .pkg {
+        background: var(--surface);
+        border: 1px solid var(--border);
+        border-radius: var(--radius);
+        padding: 1.25rem 1.4rem;
+        transition: border-color 0.15s ease, transform 0.15s ease;
+      }
+      .pkg:hover {
+        border-color: rgba(97, 175, 239, 0.4);
+      }
+
+      .pkg-head {
+        display: flex;
+        align-items: baseline;
+        flex-wrap: wrap;
+        gap: 0.6rem 1rem;
+        margin-bottom: 0.6rem;
+      }
+
+      .pkg-name {
+        font-family: var(--mono);
+        font-size: 1.05rem;
+        color: var(--text-bright);
+        font-weight: 600;
+      }
+
+      .pkg-link {
+        font-size: 0.82rem;
+        color: var(--accent);
+      }
+
+      .pkg-desc {
+        color: var(--text);
+        font-size: 0.96rem;
+        margin-bottom: 0.85rem;
+      }
+      .pkg-desc strong {
+        color: var(--text-bright);
+      }
+
+      .pkg-install {
+        display: block;
+        background: var(--bg2);
+        border: 1px solid var(--border);
+        border-radius: 6px;
+        padding: 0.55rem 0.8rem;
+        font-family: var(--mono);
+        font-size: 0.85rem;
+        color: var(--green);
+        overflow-x: auto;
+        white-space: nowrap;
+      }
+      .pkg-install::before {
+        content: "$ ";
+        color: var(--text-dim);
+      }
+
+      /* ── FOOTER ── */
+      footer {
+        background: var(--bg2);
+        border-top: 1px solid var(--border);
+        text-align: center;
+        padding: 2.5rem 1.5rem;
+        color: var(--text-dim);
+        font-size: 0.9rem;
+      }
+
+      footer p {
+        margin-bottom: 1rem;
+      }
+
+      .footer-links {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.4rem 1.4rem;
+        justify-content: center;
+      }
+
+      /* ── RESPONSIVE ── */
+      @media (max-width: 600px) {
+        .nav-links {
+          gap: 0.85rem;
+          font-size: 0.85rem;
+        }
+        header.hero {
+          padding: 3.5rem 1rem 2.5rem;
+        }
+        section {
+          padding: 2.5rem 0;
+        }
+        .pkg {
+          padding: 1.1rem;
+        }
+        h2 {
+          font-size: 1.35rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <div class="nav-inner">
+        <a class="nav-brand" href="#top">digital-defiance/tap</a>
+        <div class="nav-links">
+          <a href="#casks">Casks</a>
+          <a href="#formulae">Formulae</a>
+          <a href="https://github.com/Digital-Defiance/homebrew-tap"
+            >GitHub</a
+          >
+        </div>
+      </div>
+    </nav>
+
+    <header class="hero" id="top">
+      <h1>Digital Defiance <span class="accent">Homebrew Tap</span></h1>
+      <p class="tagline">
+        Official Homebrew repository for <strong>BSH (BrightShell)</strong>,
+        the <strong>BrightDate</strong> time utilities, and the
+        <strong>SDI Agent</strong> for macOS.
+      </p>
+      <div class="hero-install">brew tap digital-defiance/tap</div>
+    </header>
+
+    <main>
+      <section id="casks">
+        <div class="container">
+          <div class="section-label">🍶 Casks</div>
+          <h2>macOS applications</h2>
+
+          <div class="pkg-grid">
+            <article class="pkg">
+              <div class="pkg-head">
+                <span class="pkg-name">bsh-sdiagent</span>
+                <a
+                  class="pkg-link"
+                  href="https://sdiagent.digitaldefiance.org"
+                  >sdiagent.digitaldefiance.org →</a
+                >
+              </div>
+              <p class="pkg-desc">
+                <strong>BSH SDI Agent</strong> — macOS menu-bar app for BSH's
+                Secure Semantic Data Injection protocol. Encrypted credential
+                payloads arrive over an <code>OSC 7777</code> terminal escape,
+                never touching <code>ps</code>, shell history, or disk.
+              </p>
+              <code class="pkg-install"
+                >brew install --cask digital-defiance/tap/bsh-sdiagent</code
+              >
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="formulae">
+        <div class="container">
+          <div class="section-label">🧪 Formulae</div>
+          <h2>Shells and command-line tools</h2>
+
+          <div class="pkg-grid">
+            <article class="pkg">
+              <div class="pkg-head">
+                <span class="pkg-name">bsh</span>
+                <a class="pkg-link" href="https://bsh.digitaldefiance.org"
+                  >bsh.digitaldefiance.org →</a
+                >
+              </div>
+              <p class="pkg-desc">
+                <strong>BrightShell (BSH)</strong> — a zsh-compatible shell
+                with BrightDate woven natively into builtins, parameters,
+                prompt escapes, and timestamps. 100% zsh-compatible, with
+                opt-in BrightDate modules for next-gen time handling.
+              </p>
+              <code class="pkg-install"
+                >brew install digital-defiance/tap/bsh</code
+              >
+            </article>
+
+            <article class="pkg">
+              <div class="pkg-head">
+                <span class="pkg-name">findutils-brightdate</span>
+                <a
+                  class="pkg-link"
+                  href="https://findutils.digitaldefiance.org"
+                  >findutils.digitaldefiance.org →</a
+                >
+              </div>
+              <p class="pkg-desc">
+                <strong>BrightDate-enabled GNU findutils</strong> — drop-in
+                replacements for <code>find</code>, <code>xargs</code>, and
+                <code>locate</code> (as <code>bfind</code>,
+                <code>bxargs</code>, <code>blocate</code>) with native
+                BrightDate support across all time fields and printf
+                specifiers.
+              </p>
+              <code class="pkg-install"
+                >brew install digital-defiance/tap/findutils-brightdate</code
+              >
+            </article>
+
+            <article class="pkg">
+              <div class="pkg-head">
+                <span class="pkg-name">bdate</span>
+              </div>
+              <p class="pkg-desc">
+                <strong>BrightDate</strong> — a <code>date</code> replacement
+                that prints the current time as a decimal day since J2000.0.
+                Converts between BrightDate, ISO 8601, Julian Date, MJD, and
+                Unix time with up to 12 decimal places of precision.
+              </p>
+              <code class="pkg-install"
+                >brew install digital-defiance/tap/bdate</code
+              >
+            </article>
+
+            <article class="pkg">
+              <div class="pkg-head">
+                <span class="pkg-name">btime</span>
+              </div>
+              <p class="pkg-desc">
+                <strong>BrightTime</strong> — runs a command and reports
+                elapsed time in millidays (1 md = 86.4 s), with start and end
+                BrightDate timestamps. Useful for benchmarking and
+                time-sensitive scripting.
+              </p>
+              <code class="pkg-install"
+                >brew install digital-defiance/tap/btime</code
+              >
+            </article>
+
+            <article class="pkg">
+              <div class="pkg-head">
+                <span class="pkg-name">buptime</span>
+              </div>
+              <p class="pkg-desc">
+                <strong>BrightUptime</strong> — system uptime in BrightDate
+                units. Shows uptime in days and millidays alongside the boot
+                BrightDate, with milliday accuracy.
+              </p>
+              <code class="pkg-install"
+                >brew install digital-defiance/tap/buptime</code
+              >
+            </article>
+
+            <article class="pkg">
+              <div class="pkg-head">
+                <span class="pkg-name">bcal</span>
+              </div>
+              <p class="pkg-desc">
+                <strong>BrightCal</strong> — a <code>cal</code> replacement
+                that displays a calendar with each date's BrightDate value at
+                noon. Supports three-month and full-year views with
+                configurable precision.
+              </p>
+              <code class="pkg-install"
+                >brew install digital-defiance/tap/bcal</code
+              >
+            </article>
+
+            <article class="pkg">
+              <div class="pkg-head">
+                <span class="pkg-name">bwatch</span>
+              </div>
+              <p class="pkg-desc">
+                <strong>BrightWatch</strong> — a <code>watch</code> replacement
+                that repeatedly runs a command and stamps each invocation with
+                a BrightDate value and elapsed time.
+              </p>
+              <code class="pkg-install"
+                >brew install digital-defiance/tap/bwatch</code
+              >
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>
+        Digital Defiance Homebrew Tap —
+        <a href="https://github.com/Digital-Defiance/homebrew-tap">GitHub</a>
+      </p>
+      <div class="footer-links">
+        <a href="https://github.com/Digital-Defiance/bsh">BSH Source</a>
+        <a href="https://github.com/Digital-Defiance/ohmybsh">Oh My Bsh</a>
+        <a href="https://brightdate.org">BrightDate</a>
+        <a href="https://findutils.digitaldefiance.org">BrightFindutils</a>
+        <a href="https://sdiagent.digitaldefiance.org">SDI Agent</a>
+        <a href="https://www.reddit.com/r/BrightShell/">Sub-Reddit</a>
+      </div>
+    </footer>
+  </body>
+</html>
