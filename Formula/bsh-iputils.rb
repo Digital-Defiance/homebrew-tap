@@ -1,4 +1,4 @@
-class BSHIputils < Formula
+class BshIputils < Formula
   desc "Bright Spacetime/Date/Space-aware networking utilities"
   homepage "https://iputils.digitaldefiance.org"
   url "https://github.com/Digital-Defiance/bsh-iputils/archive/refs/tags/20260520.tar.gz"
