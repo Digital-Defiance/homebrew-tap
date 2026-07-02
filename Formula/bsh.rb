@@ -1,9 +1,9 @@
 class Bsh < Formula
   desc "BrightShell - zsh fork with native BrightDate builtins and BrightLink agent"
   homepage "https://github.com/Digital-Defiance/bsh"
-  url "https://github.com/Digital-Defiance/bsh/archive/refs/tags/v5.14.8.tar.gz"
-  version "5.14.8"
-  sha256 "af7485741fd22339933ea5e31da35ff407a4ebea9226694f20ff27d55706b90e"
+  url "https://github.com/Digital-Defiance/bsh/archive/refs/tags/v5.14.9.tar.gz"
+  version "5.14.9"
+  sha256 "5b4f145b6061a8b5447a1e1a41c00c48d2e73f0379b46d173282e1299a2a5a5f"
   license "MIT"
   head "https://github.com/Digital-Defiance/bsh.git", branch: "main"
 
@@ -41,7 +41,7 @@ class Bsh < Formula
   end
 
   test do
-    assert_match "5.14.8", shell_output("#{bin}/bsh --version")
+    assert_match "5.14.9", shell_output("#{bin}/bsh --version")
     assert_match "--color", shell_output("#{bin}/bsh -c 'btime --help'")
     assert_equal "hello\n", shell_output("#{bin}/bsh -c 'echo hello'")
     # Verify the BrightLink module built and both builtins are registered
