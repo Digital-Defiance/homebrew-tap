@@ -8,11 +8,19 @@ class Bsh < Formula
   head "https://github.com/Digital-Defiance/bsh.git", branch: "main"
 
   depends_on "autoconf" => :build
+  depends_on "rust" => :build
   depends_on "ncurses"
+
+  resource "brightdate-rust" do
+    url "https://github.com/Digital-Defiance/brightdate-rust/archive/refs/tags/v0.1.2.tar.gz"
+    sha256 "d3a6e990d40b8e287509dde8462dfdcc10772738c76bac0b6aa2c163e03781e0"
+  end
 
   def install
     # configure is not in the tarball (gitignored); regenerate it
     system "autoconf"
+    # brightdate-rust must sit at $(sdir_top)/brightdate-rust relative to the bsh root
+    resource("brightdate-rust").stage(buildpath/"brightdate-rust")
     system "./configure", "--prefix=#{prefix}",
                           "--bindir=#{bin}",
                           "--mandir=#{man}",
