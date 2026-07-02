@@ -1,8 +1,8 @@
 cask "bsh-sdiagent" do
-  version "1.0.0"
-  sha256 "6ccf5e9936d78009bb747b5ab79fa8486a861cef2810ee356b0f5c2a5170ae01"
+  version "1.0.1"
+  sha256 "76d0879c22f55bf0eefa5f865d28872e0f83831ca578a54f0c10868db4f7b536"
 
-  url "https://github.com/Digital-Defiance/bsh-sdi-agent/releases/download/v1.0.0/BSH-SDIAgent-1.0.zip"
+  url "https://github.com/Digital-Defiance/bsh-sdi-agent/releases/download/v1.0.1/BSH-SDIAgent-1.0.1.zip"
   name "BSH SDIAgent"
   desc "Secure Data Injection Agent for BrightShell"
   homepage "https://github.com/Digital-Defiance/bsh-sdi-agent"
