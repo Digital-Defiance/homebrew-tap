@@ -1,6 +1,6 @@
 cask "brightvision" do
-  version "0.2.6"
-  sha256 "9e2c9951fdd71b16841046c73df2a219a70360d4c017d37be406fcc643549a0d"
+  version "0.3.0"
+  sha256 "29d1affdd4f8da4ec432db83a7a69909ce80c45c7354243fae6574857cd8a9e4"
 
   url "https://github.com/Digital-Defiance/BrightVision/releases/download/v#{version}/BrightVision_#{version}_universal.dmg"
   name "BrightVision"
