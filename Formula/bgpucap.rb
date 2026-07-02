@@ -1,8 +1,8 @@
 class Bgpucap < Formula
   desc "Run a command and report GPU, CPU, and unified memory usage on Apple Silicon"
   homepage "https://github.com/Digital-Defiance/gpucap"
-  url "https://static.crates.io/crates/gpucap/gpucap-0.1.3.crate"
-  sha256 "40296493b3f8470d43035f425bac1677ad06650d5a736c37e2e165c06fe6b610"
+  url "https://static.crates.io/crates/gpucap/gpucap-0.1.4.crate"
+  sha256 "c0d38a71488b06fe2c44baa9fda3e5ffd27754fb4d910494374e40c473ce2701"
   license "MIT"
   head "https://github.com/Digital-Defiance/gpucap.git", branch: "main"
 
