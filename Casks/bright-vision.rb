@@ -1,6 +1,6 @@
 cask "bright-vision" do
-  version "0.1.0-bright1"
-  sha256 "1f9f4e379689f8b4f1b13ee244067cf691472763581c8db0b1be83a69918bf78"
+  version "0.1.0-bright2"
+  sha256 "9dbb9ec77070172051089fbd2dda02a5d6b682885153d111696d082038741041"
 
   url "https://github.com/Digital-Defiance/bright-vision/releases/download/v#{version}/Bright.Vision_#{version}_universal.dmg"
   name "Bright Vision"
@@ -8,7 +8,6 @@ cask "bright-vision" do
   homepage "https://bright-vision.digitaldefiance.org"
 
   depends_on macos: :tahoe
-  depends_on arch: :arm64
 
   app "Bright Vision.app"
 end
