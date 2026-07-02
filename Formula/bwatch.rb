@@ -1,8 +1,8 @@
 class Bwatch < Formula
   desc "Repeatedly run a command and display BrightDate timestamps with elapsed time"
   homepage "https://github.com/Digital-Defiance/brightdate-rust"
-  url "https://github.com/Digital-Defiance/brightdate-rust/archive/refs/tags/v0.5.4.tar.gz"
-  sha256 "b435126c99c95cb1e71652fc97dc60ba4e1b32ceda83536f385dde5328c9a9b7"
+  url "https://github.com/Digital-Defiance/brightdate-rust/archive/refs/tags/v0.5.5.tar.gz"
+  sha256 "2f6c32435d9f6681191eedc1cd4d5895075f2ae648860010cf46916a13646f3c"
   license "MIT"
   head "https://github.com/Digital-Defiance/brightdate-rust.git", branch: "main"
 
