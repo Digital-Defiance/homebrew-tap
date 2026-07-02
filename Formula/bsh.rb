@@ -3,7 +3,7 @@ class Bsh < Formula
   homepage "https://github.com/Digital-Defiance/bsh"
   url "https://github.com/Digital-Defiance/bsh/archive/refs/tags/v5.14.11.tar.gz"
   version "5.14.11"
-  sha256 "49a2f32b269e11bf463d89a00680ee9f4dba2e8db50ad474e3bf5dad83394c00"
+  sha256 "7bfcb4e4595f23892d65896d6f49d09fe9e41ee1f16af84ad2e1b41785f7777e"
   license "MIT"
   head "https://github.com/Digital-Defiance/bsh.git", branch: "main"
 
