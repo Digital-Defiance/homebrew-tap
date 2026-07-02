@@ -1,7 +1,7 @@
 class Bsh < Formula
   desc "BrightShell — zsh fork with native BrightDate builtins and Secure Data Injection (bsh/sdi)"
   homepage "https://github.com/Digital-Defiance/bsh"
-  url "https://github.com/Digital-Defiance/bsh/archive/refs/tags/bsh-5.12.1.tar.gz"
+  url "https://github.com/Digital-Defiance/bsh/archive/refs/tags/v5.12.1.tar.gz"
   sha256 "d5558cd419c8d46bdc958064cb97f963d1ea793866414c025906ec15033512ed"
   version "5.12.1"
   license "MIT"
