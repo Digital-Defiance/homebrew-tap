@@ -1,8 +1,8 @@
 class BrightIputils < Formula
   desc "Bright Spacetime/Date/Space-aware networking utilities"
   homepage "https://iputils.digitaldefiance.org"
-  url "https://github.com/Digital-Defiance/bright-iputils/archive/refs/tags/20260529.tar.gz"
-  sha256 "898ce516fee4716b232c7a236f5ad85133b2b088e125fb058771953ed0a7488a"
+  url "https://github.com/Digital-Defiance/bright-iputils/archive/refs/tags/20260530.tar.gz"
+  sha256 "52a348ff0bcf8ff696cb1a59b30af0da3dd95ec7e90c2dc2a3173fc0681ebe25"
   license "BSD-3-Clause"
 
   depends_on "meson" => :build
