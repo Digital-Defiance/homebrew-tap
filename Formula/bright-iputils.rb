@@ -7,7 +7,10 @@ class BrightIputils < Formula
 
   depends_on "meson" => :build
   depends_on "ninja" => :build
+  depends_on "pkgconf" => :build
   depends_on "libidn2"
+  depends_on "openssl@3"
+  depends_on "secp256k1"
 
   # libbrightlink is consumed as a Meson subproject via a git submodule in
   # the upstream repo. GitHub's auto-generated source tarballs do NOT
