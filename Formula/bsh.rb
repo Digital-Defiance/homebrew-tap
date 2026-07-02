@@ -1,9 +1,9 @@
 class Bsh < Formula
   desc "BrightShell - zsh fork with native BrightDate builtins and BrightLink agent"
   homepage "https://github.com/Digital-Defiance/bsh"
-  url "https://github.com/Digital-Defiance/bsh/archive/refs/tags/v5.14.0.tar.gz"
-  version "5.14.0"
-  sha256 "d6eb8c62266c4d0ec9fed70b0a0580294d96ce83f833bbbd611cb9d1e37abf99"
+  url "https://github.com/Digital-Defiance/bsh/archive/refs/tags/v5.14.1.tar.gz"
+  version "5.14.1"
+  sha256 "565537b578fd58ef1f701b712bda7ac4d10baac84a5caee98d2d9360afb26bf4"
   license "MIT"
   head "https://github.com/Digital-Defiance/bsh.git", branch: "main"
 
@@ -41,7 +41,7 @@ class Bsh < Formula
   end
 
   test do
-    assert_match "5.14.0", shell_output("#{bin}/bsh --version")
+    assert_match "5.14.1", shell_output("#{bin}/bsh --version")
     assert_equal "hello\n", shell_output("#{bin}/bsh -c 'echo hello'")
     # Verify the BrightLink module built and both builtins are registered
     out = shell_output("#{bin}/bsh -c 'zmodload bsh/brightlink; whence -v bsh-inject link-geo'")
