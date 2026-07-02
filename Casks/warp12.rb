@@ -1,6 +1,6 @@
 cask "warp12" do
-  version "0.1.0"
-  sha256 "7ffff07c9720b5ed9c319c9a37634345470f2bcb8103cea8b6f34e2ef3b9003f"
+  version "0.2.0"
+  sha256 "a8467fdcfb2cf0cd2289a29c4443924de5b948530384347bc22a598fcae1968f"
 
   url "https://github.com/Digital-Defiance/Warp12/releases/download/v#{version}/Warp%2012_#{version}_universal.dmg"
   name "Warp 12"
