@@ -14,8 +14,8 @@ class Bsh < Formula
   depends_on "secp256k1"
 
   resource "brightdate-rust" do
-    url "https://github.com/Digital-Defiance/brightdate-rust/archive/refs/tags/v0.5.5.tar.gz"
-    sha256 "2f6c32435d9f6681191eedc1cd4d5895075f2ae648860010cf46916a13646f3c"
+    url "https://github.com/Digital-Defiance/brightdate-rust/archive/refs/tags/v0.5.6.tar.gz"
+    sha256 "6368a8228d676ffc4fa6ff9399a94210938788321c0a6937c323b1158b99d577"
   end
 
   def install
