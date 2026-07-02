@@ -1,6 +1,6 @@
 cask "aider-vision" do
-  version "0.90.12.dev1"
-  sha256 "62bc465e9e71e5c90383751d53d114d1941f5df10bb8298faf01332749449253"
+  version "0.90.12.dev2"
+  sha256 "876f062f307c666b9d7f07c56a76944ea6ee6d741d1d1b8e0e7192978745f8b1"
 
   url "https://github.com/Digital-Defiance/aider-vision/releases/download/v#{version}/Aider.Vision_#{version}_universal.dmg"
   name "Aider Vision"
