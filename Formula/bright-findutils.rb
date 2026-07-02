@@ -3,9 +3,9 @@ class BrightFindutils < Formula
   homepage "https://findutils.digitaldefiance.org"
   license "GPL-3.0-or-later"
 
-  url "https://github.com/Digital-Defiance/bright-findutils/archive/refs/tags/v4.10.0-bd3.tar.gz"
-  sha256 "320333e10b31a2111e92cb71fb852fa0601dbfd6bf42eb0af44c918f6a2bb56f"
-  version "4.10.0-bd3"
+  url "https://github.com/Digital-Defiance/bright-findutils/archive/refs/tags/v4.10.0-bd4.tar.gz"
+  sha256 "0a1b5ed0e4bc0e8195e1085d2418b0ed1030ad4e7ac61ff3b36523ebf3897c45"
+  version "4.10.0-bd4"
 
   head "https://github.com/Digital-Defiance/bright-findutils.git", branch: "main"
 
