@@ -1,9 +1,9 @@
 class Bsh < Formula
   desc "BrightShell — zsh fork with native BrightDate builtins and Secure Data Injection (bsh/sdi)"
   homepage "https://github.com/Digital-Defiance/bsh"
-  url "https://github.com/Digital-Defiance/bsh/archive/refs/tags/bsh-5.10.0.tar.gz"
-  sha256 "5b09cde6777c1a2fcb442c9f6fd13ff2949b7d9923b5dc1732ed630a00788d80"
-  version "5.10.0"
+  url "https://github.com/Digital-Defiance/bsh/archive/refs/tags/bsh-5.11.0.tar.gz"
+  sha256 "ad15f41765fc0d7950db3ede18eb4946ffe10c04e02aff8522f03f00a2429eea"
+  version "5.11.0"
   license "MIT"
   head "https://github.com/Digital-Defiance/bsh.git", branch: "main"
 
@@ -39,7 +39,7 @@ class Bsh < Formula
   end
 
   test do
-    assert_match "5.10.0", shell_output("#{bin}/bsh --version")
+    assert_match "5.11.0", shell_output("#{bin}/bsh --version")
     assert_equal "hello\n", shell_output("#{bin}/bsh -c 'echo hello'")
     # Verify the SDI module built and the builtin is registered
     assert_match "bsh-inject", shell_output("#{bin}/bsh -c 'zmodload bsh/sdi; echo bsh-inject'")
