@@ -19,6 +19,8 @@ class Bsh < Formula
   def install
     # configure is not in the tarball (gitignored); regenerate it
     system "autoconf"
+    # The tarball includes an empty brightdate-rust/ submodule stub; remove it before staging
+    rm_rf buildpath/"brightdate-rust"
     # brightdate-rust must sit at $(sdir_top)/brightdate-rust relative to the bsh root
     resource("brightdate-rust").stage(buildpath/"brightdate-rust")
     system "./configure", "--prefix=#{prefix}",
