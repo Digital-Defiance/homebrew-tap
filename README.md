@@ -19,11 +19,12 @@ brew tap digital-defiance/homebrew-tap
 Then install any of the tools:
 
 ```sh
-brew install bdate     # date replacement — shows current BrightDate
-brew install btime     # time replacement — shows elapsed in BrightDate units
-brew install buptime   # uptime replacement — shows system uptime in BrightDate
-brew install bcal      # cal replacement — calendar with BrightDate values
-brew install bwatch    # watch replacement — runs commands with BrightDate timestamps
+brew install bdate                  # date replacement — shows current BrightDate
+brew install btime                  # time replacement — shows elapsed in BrightDate units
+brew install buptime                # uptime replacement — shows system uptime in BrightDate
+brew install bcal                   # cal replacement — calendar with BrightDate values
+brew install bwatch                 # watch replacement — runs commands with BrightDate timestamps
+brew install findutils-brightdate   # find/locate/xargs with BrightDate predicates and format specifiers
 ```
 
 ## Tools
@@ -75,6 +76,32 @@ bwatch [OPTIONS] COMMAND [ARGS...]
 ```
 
 Repeatedly runs a command, clearing the screen each time and displaying a BrightDate timestamp and elapsed time. Options: `--interval N` (seconds, default 2.0), `--count N` (0 = infinite).
+
+### `bfind`, `blocate`, `bupdatedb`, `bxargs` — BrightDate findutils
+
+GNU findutils 4.10.0 patched to use BrightDate throughout.
+
+```sh
+brew install findutils-brightdate
+```
+
+| Binary | Description |
+|---|---|
+| `bfind` | Like `find`, adds `-after <BD>`, `-before <BD>`, and `%Wt`/`%Wa`/`%Wc`/`%WB` printf specifiers |
+| `blocate` | Like `locate`, shows BrightDate timestamps in `--statistics` output |
+| `bupdatedb` | Like `updatedb`, builds the blocate database |
+| `bxargs` | Like `xargs` |
+
+```sh
+# Find files modified after BD 9600
+bfind . -after 9600.0
+
+# Print BrightDate mtime of every file
+bfind . -printf '%p  %Wt\n'
+
+# Find files not touched since BD 9000
+bfind . -before 9000.0
+```
 
 ## Publishing and crates.io
 
