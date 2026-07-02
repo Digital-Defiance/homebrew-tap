@@ -7,10 +7,12 @@ class Bsh < Formula
   license "MIT"
   head "https://github.com/Digital-Defiance/bsh.git", branch: "main"
 
+  depends_on "autoconf" => :build
   depends_on "ncurses"
 
   def install
-    # configure is pre-generated in the repo; no autoconf step needed
+    # configure is not in the tarball (gitignored); regenerate it
+    system "autoconf"
     system "./configure", "--prefix=#{prefix}",
                           "--bindir=#{bin}",
                           "--mandir=#{man}",
