@@ -1,13 +1,13 @@
-class FindutilsBrightdate < Formula
+class BrightFindutils < Formula
   desc "GNU findutils with BrightDate time system (bfind, blocate, bupdatedb, bxargs)"
-  homepage "https://github.com/Digital-Defiance/findutils-brightdate"
+  homepage "https://findutils.digitaldefiance.org"
   license "GPL-3.0-or-later"
 
-  url "https://github.com/Digital-Defiance/findutils-brightdate/archive/refs/tags/v4.10.0-bd3.tar.gz"
-  sha256 "d81ba968f435a5e7de3eea8ea5537fa8ec77086e339fede47a5859f09260a074"
+  url "https://github.com/Digital-Defiance/bright-findutils/archive/refs/tags/v4.10.0-bd3.tar.gz"
+  sha256 "320333e10b31a2111e92cb71fb852fa0601dbfd6bf42eb0af44c918f6a2bb56f"
   version "4.10.0-bd3"
 
-  head "https://github.com/Digital-Defiance/findutils-brightdate.git", branch: "main"
+  head "https://github.com/Digital-Defiance/bright-findutils.git", branch: "main"
 
   # Build dependencies (needed to regenerate autotools files from HEAD)
   depends_on "autoconf" => :build
