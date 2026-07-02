@@ -1,4 +1,4 @@
-class Gpucap < Formula
+class Bgpucap < Formula
   desc "Run a command and report GPU, CPU, and unified memory usage on Apple Silicon"
   homepage "https://github.com/Digital-Defiance/gpucap"
   url "https://static.crates.io/crates/gpucap/gpucap-0.1.2.crate"
