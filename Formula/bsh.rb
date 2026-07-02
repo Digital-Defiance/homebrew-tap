@@ -14,8 +14,8 @@ class Bsh < Formula
   depends_on "secp256k1"
 
   resource "brightdate-rust" do
-    url "https://github.com/Digital-Defiance/brightdate-rust/archive/refs/tags/v0.5.1.tar.gz"
-    sha256 "51ea19e94993633b9165695c9b771bdd6f76ae5855349fa53127c46bcf0d61c2"
+    url "https://github.com/Digital-Defiance/brightdate-rust/archive/refs/tags/v0.5.2.tar.gz"
+    sha256 "cd44d3bf0cf08b0c1ccac9becaf261a24fea9df97ce35ec619f783582e78e76f"
   end
 
   def install
@@ -42,7 +42,8 @@ class Bsh < Formula
 
   test do
     assert_match "5.14.1", shell_output("#{bin}/bsh --version")
-    assert_equal "hello\n", shell_output("#{bin}/bsh -c 'echo hello'")
+    assert_equal "hello
+", shell_output("#{bin}/bsh -c 'echo hello'")
     # Verify the BrightLink module built and both builtins are registered
     out = shell_output("#{bin}/bsh -c 'zmodload bsh/brightlink; whence -v bsh-inject link-geo'")
     assert_match "bsh-inject", out
