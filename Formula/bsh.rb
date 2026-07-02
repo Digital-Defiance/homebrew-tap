@@ -1,9 +1,9 @@
 class Bsh < Formula
   desc "BrightShell - zsh fork with native BrightDate builtins and BrightLink agent"
   homepage "https://github.com/Digital-Defiance/bsh"
-  url "https://github.com/Digital-Defiance/bsh/archive/refs/tags/v5.14.5.tar.gz"
-  version "5.14.5"
-  sha256 "8bc8a2a8aad4f30cba15981be228e41feaf75f1848144fd94b3637fa61d38fe8"
+  url "https://github.com/Digital-Defiance/bsh/archive/refs/tags/v5.14.8.tar.gz"
+  version "5.14.8"
+  sha256 "af7485741fd22339933ea5e31da35ff407a4ebea9226694f20ff27d55706b90e"
   license "MIT"
   head "https://github.com/Digital-Defiance/bsh.git", branch: "main"
 
@@ -14,8 +14,8 @@ class Bsh < Formula
   depends_on "secp256k1"
 
   resource "brightdate-rust" do
-    url "https://github.com/Digital-Defiance/brightdate-rust/archive/refs/tags/v0.5.3.tar.gz"
-    sha256 "6af51dd3e37d1450bbac9128257d4d426ce4a7816d572bc1aae3b24acb9afec4"
+    url "https://github.com/Digital-Defiance/brightdate-rust/archive/refs/tags/v0.5.4.tar.gz"
+    sha256 "b435126c99c95cb1e71652fc97dc60ba4e1b32ceda83536f385dde5328c9a9b7"
   end
 
   def install
@@ -41,7 +41,7 @@ class Bsh < Formula
   end
 
   test do
-    assert_match "5.14.5", shell_output("#{bin}/bsh --version")
+    assert_match "5.14.8", shell_output("#{bin}/bsh --version")
     assert_match "--color", shell_output("#{bin}/bsh -c 'btime --help'")
     assert_equal "hello\n", shell_output("#{bin}/bsh -c 'echo hello'")
     # Verify the BrightLink module built and both builtins are registered

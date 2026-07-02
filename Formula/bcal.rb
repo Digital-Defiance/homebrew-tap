@@ -1,8 +1,8 @@
 class Bcal < Formula
   desc "Calendar utility showing BrightDate values for each day"
   homepage "https://github.com/Digital-Defiance/brightdate-rust"
-  url "https://github.com/Digital-Defiance/brightdate-rust/archive/refs/tags/v0.5.3.tar.gz"
-  sha256 "6af51dd3e37d1450bbac9128257d4d426ce4a7816d572bc1aae3b24acb9afec4"
+  url "https://github.com/Digital-Defiance/brightdate-rust/archive/refs/tags/v0.5.4.tar.gz"
+  sha256 "b435126c99c95cb1e71652fc97dc60ba4e1b32ceda83536f385dde5328c9a9b7"
   license "MIT"
   head "https://github.com/Digital-Defiance/brightdate-rust.git", branch: "main"
 
