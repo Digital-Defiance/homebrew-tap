@@ -24,6 +24,7 @@ brew install btime                  # time replacement — shows elapsed in Brig
 brew install buptime                # uptime replacement — shows system uptime in BrightDate
 brew install bcal                   # cal replacement — calendar with BrightDate values
 brew install bwatch                 # watch replacement — runs commands with BrightDate timestamps
+brew install gpucap                 # GPU/CPU/memory profiler for Apple Silicon (like time)
 brew install findutils-brightdate   # find/locate/xargs with BrightDate predicates and format specifiers
 ```
 
@@ -90,6 +91,23 @@ bwatch [OPTIONS] COMMAND [ARGS...]
 
 Repeatedly runs a command, clearing the screen each time and displaying a BrightDate timestamp and elapsed time. Options: `--interval N` (seconds, default 2.0), `--count N` (0 = infinite).
 
+### `gpucap` — Apple Silicon GPU/CPU/memory profiler
+
+```
+gpucap COMMAND [ARGS...]
+gpucap gpuexercise [OPTIONS]
+```
+
+Runs a command like `time(1)` and reports average and peak **GPU**, **CPU**, and **unified memory** utilization on Apple Silicon Macs. Color output follows BrightDate conventions (`--color`, `--color-scheme`).
+
+```sh
+brew install gpucap
+gpucap sleep 1
+gpucap gpuexercise --percent 50 --seconds 10
+```
+
+Also on [crates.io](https://crates.io/crates/gpucap): `cargo install gpucap`
+
 ### `bfind`, `blocate`, `bupdatedb`, `bxargs` — BrightDate findutils
 
 GNU findutils 4.10.0 patched to use BrightDate throughout.
@@ -126,6 +144,7 @@ cargo install btime
 cargo install buptime
 cargo install bcal
 cargo install bwatch
+cargo install gpucap
 ```
 
 ## License
