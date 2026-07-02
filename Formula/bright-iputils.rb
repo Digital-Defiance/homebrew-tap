@@ -1,8 +1,8 @@
 class BrightIputils < Formula
   desc "Bright Spacetime/Date/Space-aware networking utilities"
   homepage "https://iputils.digitaldefiance.org"
-  url "https://github.com/Digital-Defiance/bright-iputils/archive/refs/tags/20260523.tar.gz"
-  sha256 "950ceb362d5383bb514cd35429267bdf7b36547b45cd4d9ec8f23a058f3af494"
+  url "https://github.com/Digital-Defiance/bright-iputils/archive/refs/tags/20260524.tar.gz"
+  sha256 "f5f24813e7707918d8bce154de3d00322d9ec9359531e0528268a7a5161ab15d"
   license "BSD-3-Clause"
 
   depends_on "meson" => :build
@@ -17,8 +17,8 @@ class BrightIputils < Formula
   # include submodule contents, so we vendor it here as a Homebrew resource
   # pinned to the same commit the submodule points at.
   resource "libbrightlink" do
-    url "https://github.com/Digital-Defiance/libbrightlink/archive/3b849664a5f3cbe0d7a44bde367077e45f140748.tar.gz"
-    sha256 "86c9283d8c657b5a708f5c70560decaca8a5a810211ea7fcf91d5572e6eb70fb"
+    url "https://github.com/Digital-Defiance/libbrightlink/archive/8536e49198dfa71ae016e3e67993f9282c4a473f.tar.gz"
+    sha256 "370a56966fd67e809d180822cb47e494f0b44119099831745512eb0b6e53e9a9"
   end
 
   def install
