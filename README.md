@@ -27,6 +27,19 @@ brew install bwatch                 # watch replacement — runs commands with B
 brew install findutils-brightdate   # find/locate/xargs with BrightDate predicates and format specifiers
 ```
 
+## SDI Agent (macOS)
+
+The macOS menu-bar agent for BSH's Secure Semantic Data Injection protocol. Encrypted credential payloads arrive over an OSC 7777 terminal escape, never touching ps, shell history, or disk.
+
+Website: [sdiagent.digitaldefiance.org](https://sdiagent.digitaldefiance.org)
+
+Install:
+
+```sh
+brew tap digital-defiance/tap
+brew install --cask bsh-sdiagent
+```
+
 ## Tools
 
 ### `bdate` — BrightDate date utility
