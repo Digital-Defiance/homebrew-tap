@@ -1,8 +1,8 @@
 cask "brightnexus" do
-  version "1.1.0"
-  sha256 "3e714f1964fb2c2723fbbf90ecdce65d73b246579c6cf7b3ebd7318c65b8c717"
+  version "1.1.1"
+  sha256 "34cf213f99fa2dbfe0179182f24edcb3bf3124332d328179e424dcfed7fb3a1e"
 
-  url "https://github.com/Digital-Defiance/BrightNexus/releases/download/v1.1.0/BrightNexus-1.1.0.zip"
+  url "https://github.com/Digital-Defiance/BrightNexus/releases/download/v1.1.1/BrightNexus-1.1.1.zip"
   name "BrightNexus"
   desc "Secure Enclave bridge and BrightLink credential agent"
   homepage "https://github.com/Digital-Defiance/BrightNexus"
