@@ -24,7 +24,7 @@ brew install btime                  # time replacement — shows elapsed in Brig
 brew install buptime                # uptime replacement — shows system uptime in BrightDate
 brew install bcal                   # cal replacement — calendar with BrightDate values
 brew install bwatch                 # watch replacement — runs commands with BrightDate timestamps
-brew install gpucap                 # GPU/CPU/memory profiler for Apple Silicon (like time)
+brew install gpucap                 # GPU/CPU/memory profiler (digital-defiance/tap/gpucap)
 brew install findutils-brightdate   # find/locate/xargs with BrightDate predicates and format specifiers
 ```
 
