@@ -17,7 +17,8 @@ class Bsh < Formula
   end
 
   def install
-    # configure is not in the tarball (gitignored); regenerate it
+    # config.h.in and configure are gitignored; regenerate both
+    system "autoheader"
     system "autoconf"
     # The tarball includes an empty brightdate-rust/ submodule stub; remove it before staging
     rm_rf buildpath/"brightdate-rust"
