@@ -1,8 +1,8 @@
 class Bsh < Formula
   desc "BrightShell - zsh fork with native BrightDate builtins and BrightLink agent"
   homepage "https://github.com/Digital-Defiance/bsh"
-  url "https://github.com/Digital-Defiance/bsh/archive/refs/tags/v5.14.10.tar.gz"
-  version "5.14.10"
+  url "https://github.com/Digital-Defiance/bsh/archive/refs/tags/v5.14.11.tar.gz"
+  version "5.14.11"
   sha256 "49a2f32b269e11bf463d89a00680ee9f4dba2e8db50ad474e3bf5dad83394c00"
   license "MIT"
   head "https://github.com/Digital-Defiance/bsh.git", branch: "main"
@@ -14,8 +14,8 @@ class Bsh < Formula
   depends_on "secp256k1"
 
   resource "brightdate-rust" do
-    url "https://github.com/Digital-Defiance/brightdate-rust/archive/refs/tags/v0.5.6.tar.gz"
-    sha256 "6368a8228d676ffc4fa6ff9399a94210938788321c0a6937c323b1158b99d577"
+    url "https://github.com/Digital-Defiance/brightdate-rust/archive/refs/tags/v0.5.7.tar.gz"
+    sha256 "d05b79cb0c3a8f5bd17a03df0cd2423e9c42d7a7abb17e7c534fff75ea2e2970"
   end
 
   def install
