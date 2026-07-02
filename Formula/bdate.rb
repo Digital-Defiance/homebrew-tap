@@ -1,8 +1,8 @@
 class Bdate < Formula
   desc "Date utility displaying time as BrightDate decimal days since J2000.0 epoch"
   homepage "https://github.com/Digital-Defiance/brightdate-rust"
-  url "https://github.com/Digital-Defiance/brightdate-rust/archive/refs/tags/v0.5.2.tar.gz"
-  sha256 "cd44d3bf0cf08b0c1ccac9becaf261a24fea9df97ce35ec619f783582e78e76f"
+  url "https://github.com/Digital-Defiance/brightdate-rust/archive/refs/tags/v0.5.3.tar.gz"
+  sha256 "6af51dd3e37d1450bbac9128257d4d426ce4a7816d572bc1aae3b24acb9afec4"
   license "MIT"
   head "https://github.com/Digital-Defiance/brightdate-rust.git", branch: "main"
 
