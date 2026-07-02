@@ -1,9 +1,9 @@
 class Bsh < Formula
   desc "BrightShell — zsh fork with native BrightDate builtins (bdate, btime, bcal, buptime, bwatch)"
   homepage "https://github.com/Digital-Defiance/bsh"
-  url "https://github.com/Digital-Defiance/bsh/archive/refs/tags/bsh-5.9.0.4.tar.gz"
-  sha256 "8393d5dabadeab4ea3fd9f882409bc36abf7f0f0152c39dd0a7899f2c5b1a63a"
-  version "5.9.0.4"
+  url "https://github.com/Digital-Defiance/bsh/archive/refs/tags/bsh-5.9.0.5.tar.gz"
+  sha256 "6bc711129af4b03ff9eb3de22f888040166667af2ae62479f56dd3801512a640"
+  version "5.9.0.5"
   license "MIT"
   head "https://github.com/Digital-Defiance/bsh.git", branch: "main"
 
