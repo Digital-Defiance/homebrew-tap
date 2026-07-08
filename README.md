@@ -26,6 +26,7 @@ brew install bcal                   # cal replacement — calendar with BrightDa
 brew install bwatch                 # watch replacement — runs commands with BrightDate timestamps
 brew install gpucap                 # GPU/CPU/memory profiler (digital-defiance/tap/gpucap)
 brew install findutils-brightdate   # find/locate/xargs with BrightDate predicates and format specifiers
+brew install brightvision           # local ai ui tool
 brew install brightnexus            # brightlink
 brew install warp12                 # mexican train dominoes, federation flavored
 ```
