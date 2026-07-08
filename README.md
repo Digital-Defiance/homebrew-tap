@@ -16,7 +16,7 @@ BrightDate represents time as a floating-point number of days since J2000.0 (Jul
 brew tap digital-defiance/homebrew-tap
 ```
 
-Then install any of the tools:
+Then install any of the tools/apps/game(s):
 
 ```sh
 brew install bdate                  # date replacement — shows current BrightDate
@@ -26,6 +26,8 @@ brew install bcal                   # cal replacement — calendar with BrightDa
 brew install bwatch                 # watch replacement — runs commands with BrightDate timestamps
 brew install gpucap                 # GPU/CPU/memory profiler (digital-defiance/tap/gpucap)
 brew install findutils-brightdate   # find/locate/xargs with BrightDate predicates and format specifiers
+brew install brightnexus            # brightlink
+brew install warp12                 # mexican train dominoes, federation flavored
 ```
 
 ## BrightNexus (macOS)
