@@ -2,7 +2,7 @@
 # Copy to Casks/warp12.rb — cask token warp12; app/DMG use Warp 12.
 cask "warp12" do
   version "0.7.55"
-  sha256 "4a462da64954514f4fa26e3f09188d52eeab6ffe77833d0d418d9381c231228e"
+  sha256 "ed4876911752cfac981d79606ecde828eb2fe9460a5a48b03b19e2f63a3ecfb2"
 
   url "https://github.com/Digital-Defiance/Warp12/releases/download/v#{version}/Warp_12_#{version}_universal.dmg"
   name "Warp 12"
