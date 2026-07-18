@@ -4,7 +4,7 @@ cask "warp12" do
   version "0.8.60"
   sha256 "cfb466390fd8468ad7b13a165e174ad42c6ab7a1ca1e6ff02c5fbc81f80dd15f"
 
-  url "https://github.com/Digital-Defiance/Warp12/releases/download/v#{version}/Warp_12_${version}_universal.dmg"
+  url "https://github.com/Digital-Defiance/Warp12/releases/download/v#{version}/Warp_12_#{version}_universal.dmg"
   name "Warp 12"
   desc "Federation-themed double-twelve Mexican Train dominoes (Tauri + React)"
   homepage "https://github.com/Digital-Defiance/Warp12"
