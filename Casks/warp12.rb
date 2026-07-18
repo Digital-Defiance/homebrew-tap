@@ -1,8 +1,8 @@
 # Example Homebrew cask for digital-defiance/homebrew-tap.
 # Copy to Casks/warp12.rb — cask token warp12; app/DMG use Warp 12.
 cask "warp12" do
-  version "0.7.59"
-  sha256 "80cb61efc17a08b5ff029271d68f4ea42d1ea272fe91f22ff828ba581d0d97db"
+  version "0.8.60"
+  sha256 "cfb466390fd8468ad7b13a165e174ad42c6ab7a1ca1e6ff02c5fbc81f80dd15f"
 
   url "https://github.com/Digital-Defiance/Warp12/releases/download/v#{version}/Warp_12_${version}_universal.dmg"
   name "Warp 12"
