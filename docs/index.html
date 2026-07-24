@@ -300,6 +300,10 @@
         justify-content: center;
       }
 
+      .cask-games {
+        margin-top: 2rem;
+      }
+
       /* ── RESPONSIVE ── */
       @media (max-width: 600px) {
         .nav-links {
@@ -349,7 +353,7 @@
       <section id="casks">
         <div class="container">
           <div class="section-label">🍶 Casks</div>
-          <h2>macOS applications</h2>
+          <h2>macOS Applications</h2>
 
           <div class="pkg-grid">
             <article class="pkg">
@@ -377,6 +381,37 @@
               </p>
               <code class="pkg-install"
                 >brew install --cask digital-defiance/tap/brightnexus</code>
+            </article>
+          </div>
+
+          <h2 class="cask-games">🎮 macOS Games</h2>
+
+          <div class="pkg-grid">
+            <article class="pkg">
+              <div class="pkg-head">
+                <span class="pkg-name">warp12</span>
+                <a class="pkg-link" href="https://warp.iwgf.org"
+                  >warp.iwgf.org →</a
+                >
+              </div>
+              <p class="pkg-desc">
+                <strong>Warp 12</strong> — competitive, multi-trail interstellar dominoes with fleet decorum: navigational coordinates, Spacedock, and warp trails into the Neutral Zone.
+              </p>
+              <code class="pkg-install"
+                >brew install --cask digital-defiance/tap/warp12</code>
+            </article>
+            <article class="pkg">
+              <div class="pkg-head">
+                <span class="pkg-name">supspace-lattice</span>
+                <a class="pkg-link" href="https://lattics.iwgf.org"
+                  >lattice.iwgf.org →</a
+                >
+              </div>
+              <p class="pkg-desc">
+                <strong>Subspace Lattice</strong> — a custom, perfect-information tabletop strategy game played on an 11x11 grid where players command fleets to project overlapping territorial Sensor Nets, trap opposing ships, and capture the enemy's Command Hub.
+              </p>
+              <code class="pkg-install"
+                >brew install --cask digital-defiance/tap/subspace-lattice</code>
             </article>
           </div>
         </div>
