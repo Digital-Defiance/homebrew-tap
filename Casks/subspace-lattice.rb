@@ -1,8 +1,8 @@
 # Example Homebrew cask for digital-defiance/homebrew-tap.
 # Copy to Casks/subspace-lattice.rb — cask token subspace-lattice; app/DMG use Subspace Lattice.
 cask "subspace-lattice" do
-  version "0.1.8"
-  sha256 "a70322a23ada93d48afdb20fb384b7f74481b55856c20b2c26a04d18a38c5cc9"
+  version "0.1.9"
+  sha256 "eb5486177897043b8d960e7b070e28638321d5a5f720f28901fdc3840c9a5264"
 
   url "https://github.com/Digital-Defiance/subspace-lattice/releases/download/v#{version}/Subspace_Lattice_#{version}_universal.dmg"
   name "Subspace Lattice"
