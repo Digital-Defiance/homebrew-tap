@@ -2,7 +2,7 @@
 # Copy to Casks/subspace-lattice.rb — cask token subspace-lattice; app/DMG use Subspace Lattice.
 cask "subspace-lattice" do
   version "0.1.31"
-  sha256 "ee631924dcda130881ba7a8982183091ad6f8993c81de7c0115627606282a175"
+  sha256 "0d4b6ca22233f43e24909fcadf40e34dcda118db8d9efc47a4a411d429a37a64"
 
   url "https://github.com/Digital-Defiance/subspace-lattice/releases/download/v#{version}/Subspace_Lattice_#{version}_universal.dmg"
   name "Subspace Lattice"
