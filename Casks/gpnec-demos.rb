@@ -7,7 +7,7 @@ cask "gpnec-demos" do
   desc "Metal demos: Lattice Boltzmann fluid + Euclidean/Poincaré routing sandbox"
   homepage "https://github.com/Digital-Defiance/gpnec"
 
-  depends_on macos: ">= :sonoma"
+  depends_on macos: :sonoma
 
   app "GPNEC Fluid.app"
   app "GPNEC Route.app"
