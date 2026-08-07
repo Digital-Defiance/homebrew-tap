@@ -6,8 +6,9 @@ class Gpnec < Formula
   license "MIT"
   head "https://github.com/Digital-Defiance/gpnec.git", branch: "main"
 
-  depends_on :macos
-  depends_on macos: :sonoma
+  on_macos do
+    depends_on macos: :sonoma
+  end
 
   def install
     lib.install "lib/libGPNECCBridge.dylib"
