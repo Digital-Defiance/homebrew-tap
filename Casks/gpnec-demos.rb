@@ -1,6 +1,6 @@
 cask "gpnec-demos" do
   version "0.1.0"
-  sha256 "ceb6d15f442971696516e61e046e526343cbd14ab32e374ceeb09ead1750f231"
+  sha256 "f2d18f9819362824bc72c8f320c959304f94ea112159456b98b4b333cb18096b"
 
   url "https://github.com/Digital-Defiance/gpnec/releases/download/v#{version}/gpnec-demos-#{version}-macos-universal.zip"
   name "GPNEC Demos"
@@ -22,7 +22,7 @@ cask "gpnec-demos" do
   EOS
 
   zap trash: [
-    "~/Library/Saved Application State/computer.gpnec.fluid.savedState",
-    "~/Library/Saved Application State/computer.gpnec.route.savedState",
+    "~/Library/Saved Application State/org.digitaldefiance.gpnec.fluid.savedState",
+    "~/Library/Saved Application State/org.digitaldefiance.gpnec.route.savedState",
   ]
 end
