@@ -9,6 +9,9 @@ cask "subspace-lattice" do
   desc "Federation-themed Chess + Go game variation (Tauri + React)"
   homepage "https://github.com/Digital-Defiance/subspace-lattice"
 
+  # Metal Sensor Net accelerator (Homebrew formula `gpnec`).
+  depends_on formula: "gpnec"
+
   app "Subspace Lattice.app"
 
   zap trash: [
