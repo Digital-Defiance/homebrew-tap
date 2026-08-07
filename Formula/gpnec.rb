@@ -1,8 +1,8 @@
 class Gpnec < Formula
   desc "Metal/MPSGraph bridge for Subspace Lattice Sensor Net visuals"
   homepage "https://github.com/Digital-Defiance/gpnec"
-  url "https://github.com/Digital-Defiance/gpnec/releases/download/v0.1.0/gpnec-0.1.0-macos-universal.tar.gz"
-  sha256 "2dff55b7dbfc20cfc56fb9c91cf009ed01c169d96b03bdde3c7658ef0a86cccc"
+  url "https://github.com/Digital-Defiance/gpnec/releases/download/v0.2.1/gpnec-0.2.1-macos-universal.tar.gz"
+  sha256 "e16256486434f842db5787a290a5430c4306a0a17a6c206803be0ef5482e6d8c"
   license "MIT"
   head "https://github.com/Digital-Defiance/gpnec.git", branch: "main"
 

@@ -1,6 +1,6 @@
 cask "gpnec-demos" do
-  version "0.1.0"
-  sha256 "f2d18f9819362824bc72c8f320c959304f94ea112159456b98b4b333cb18096b"
+  version "0.2.1"
+  sha256 "ac809775ae804a55bac35ccddbb7df29bee1cdaafc89b3788ff8e9c5260833ab"
 
   url "https://github.com/Digital-Defiance/gpnec/releases/download/v#{version}/gpnec-demos-#{version}-macos-universal.zip"
   name "GPNEC Demos"
