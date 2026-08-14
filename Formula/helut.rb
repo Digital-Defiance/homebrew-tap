@@ -1,18 +1,11 @@
 class Helut < Formula
   desc "Homomorphic Edge Look-Up Tensors — Metal netlist FHE research CLIs"
   homepage "https://helut.digitaldefiance.org"
+  url "https://github.com/Digital-Defiance/HELUT/archive/refs/tags/0.1.0.tar.gz"
+  version "0.1.0"
+  sha256 "f5f3a393fffe8b59815b61d2b89992cf621ae6ee1d8a58650f556d087af7f82d"
   license "MIT"
   head "https://github.com/Digital-Defiance/HELUT.git", branch: "main"
-
-  # After tagging HELUT 0.1.0 and computing sha256 (from HELUT checkout):
-  #   ./Scripts/homebrew-bump.sh 0.1.0
-  # uncomment and fill:
-  #
-  # url "https://github.com/Digital-Defiance/HELUT/archive/refs/tags/0.1.0.tar.gz"
-  # version "0.1.0"
-  # sha256 "REPLACE_ME"
-  #
-  # Until then: brew install --HEAD digital-defiance/homebrew-tap/helut
 
   depends_on xcode: ["15.0", :build]
   depends_on macos: :sonoma
