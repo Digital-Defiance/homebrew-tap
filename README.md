@@ -28,6 +28,7 @@ brew install gpucap                 # GPU/CPU/memory profiler (digital-defiance/
 brew install findutils-brightdate   # find/locate/xargs with BrightDate predicates and format specifiers
 brew install brightvision           # local ai ui tool
 brew install brightnexus            # brightlink
+brew install --cask copyist         # score-first songwriting app (Apple Silicon)
 brew install helut                  # HELUT Metal FHE research CLIs (Apple Silicon; --HEAD until 0.1.0)
 ```
 
@@ -42,6 +43,19 @@ Install:
 ```sh
 brew tap digital-defiance/tap
 brew install --cask brightnexus
+```
+
+## Copyist (macOS)
+
+Score-first songwriting: lyrics become a lead sheet, a band score, parts and a recording made from the same notes. Everything runs on your Mac; the band and the singer download inside the app when you want them. Apple Silicon, macOS 13 or later.
+
+Website: [copyist.digitaldefiance.org](https://copyist.digitaldefiance.org/)
+
+Install:
+
+```sh
+brew install --cask digital-defiance/tap/copyist
+open -a Copyist
 ```
 
 ## Tools
