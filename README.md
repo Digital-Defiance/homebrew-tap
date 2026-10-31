@@ -30,6 +30,7 @@ brew install brightvision           # local ai ui tool
 brew install brightnexus            # brightlink
 brew install --cask copyist         # score-first songwriting app (Apple Silicon)
 brew install helut                  # HELUT Metal FHE research CLIs (Apple Silicon; --HEAD until 0.1.0)
+brew install plate                  # raster image → editable, layered Illustrator-friendly SVG
 ```
 
 ## BrightNexus (macOS)
@@ -150,6 +151,36 @@ bfind . -printf '%p  %Wt\n'
 # Find files not touched since BD 9000
 bfind . -before 9000.0
 ```
+
+### `plate` — raster image to editable layered SVG
+
+Converts a raster image (PNG/JPEG/…) into an Illustrator-friendly SVG with named
+layers, recovered primitives (circles, rectangles, rounded rects, polygons),
+editable strokes, and amodal-completed shapes. The core engine is classical and
+CPU-only; no GPU or ML model is required. An optional VLM step (via a local
+LM Studio server) can name and group layers.
+
+```sh
+brew install plate
+
+# Convert an image; writes editable.svg next to a quality/editability report
+plate trace logo.png -o logo.svg --report
+
+# Batch a folder, then benchmark against the plain-VTracer baseline
+plate batch ./art -o ./out
+plate bench ./samples -o /tmp/b
+
+# Check the install (renderer, optional VLM)
+plate doctor
+```
+
+| Command | Description |
+|---|---|
+| `plate trace IMG` | Convert one image to layered SVG (`--report` adds an HTML fidelity/editability report) |
+| `plate batch DIR` | Convert every image in a folder |
+| `plate bench DIR` | Score PLATE against the plain-VTracer control |
+| `plate sweep` | Explore config levers on a sample |
+| `plate doctor` | Verify the renderer and optional VLM endpoint |
 
 ## Publishing and crates.io
 
