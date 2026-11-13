@@ -4,6 +4,7 @@ class Metaltask < Formula
   url "https://github.com/Digital-Defiance/MetalTask/archive/refs/tags/v0.1.0.tar.gz"
   sha256 "c4b0f7b42959349af4364aa2e6aaa5715e3f54baf546492b1ed221bd0676d5d9"
   license "MIT"
+  revision 1
 
   depends_on xcode: ["16.0", :build]
   depends_on arch: :arm64
@@ -12,7 +13,9 @@ class Metaltask < Formula
   def install
     swift = "/usr/bin/swift"
     build_dir = buildpath/"build-homebrew"
-    args = ["--configuration", "release", "--scratch-path", build_dir.to_s]
+    # Homebrew already restricts the build. SwiftPM cannot nest its manifest sandbox.
+    ENV["CLANG_MODULE_CACHE_PATH"] = buildpath/"clang-module-cache"
+    args = ["--configuration", "release", "--scratch-path", build_dir.to_s, "--disable-sandbox"]
     system swift, "build", *args
     products = Utils.safe_popen_read(swift, "build", *args, "--show-bin-path").strip
     system "/bin/bash", "scripts/package-app.sh", "#{products}/MetalTask", libexec, version.to_s
