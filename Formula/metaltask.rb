@@ -1,10 +1,9 @@
 class Metaltask < Formula
   desc "Native GPU task manager for Apple Silicon Macs"
-  homepage "https://digital-defiance.github.io/MetalTask/"
-  url "https://github.com/Digital-Defiance/MetalTask/archive/refs/tags/v0.1.0.tar.gz"
-  sha256 "c4b0f7b42959349af4364aa2e6aaa5715e3f54baf546492b1ed221bd0676d5d9"
+  homepage "https://metaltask.digitaldefiance.org/"
+  url "https://github.com/Digital-Defiance/MetalTask/archive/refs/tags/v0.2.0.tar.gz"
+  sha256 "eae221e82bb9fd3bb2444256fca3e666106f735e6da7f6a58b476b4b9319c6e5"
   license "MIT"
-  revision 1
 
   depends_on xcode: ["16.0", :build]
   depends_on arch: :arm64
